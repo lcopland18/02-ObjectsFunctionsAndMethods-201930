@@ -2,8 +2,8 @@
 This module lets you practice correcting SYNTAX (notation) errors.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Lauren Copland.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # TODO: 2.
@@ -31,21 +31,22 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 ###############################################################################
 
 import rosegraphics as rg
-
+import math
 
 def main():
     """ Calls the other functions in this module to demo them. """
-    print_math()
-    tutle_fn()
+    math()
+    tutle_fun()
 
 
-def print_math:
+def print_math():
     """ Prints some calculated values. """
-    x = cos(pi)
+    x = math.cos(x)
     print(x)
 
-    y = sin(pi)
-    print(The sine of PI is, y)
+    y = math.sin(pi)
+    print("The sine of PI is", y)
+
 
 
 def turtle_fun():
