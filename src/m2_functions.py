@@ -31,7 +31,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 3a.  Define a function immediately below this _TODO_.
+# DONE: 3a.  Define a function immediately below this _TODO_.
 #   It takes two arguments that denote, for a right triangle,
 #   the lengths of the two sides adjacent to its right angle,
 #   and it returns the length of the hypotenuse of that triangle.
@@ -39,14 +39,14 @@ def main():
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 3b.  In main, CALL your function and print the returned value,
+# DONE: 3b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
 import math
 def right_triangle(side1,side2):
     hypotenuse = math.sqrt((side1 ** 2) + (side2 ** 2))
-    return hypotenuse
+    print(hypotenuse)
 
 ###############################################################################
 # TODO: 4a.  Define a function immediately below this _TODO_.
@@ -75,6 +75,13 @@ def right_triangle(side1,side2):
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
+def turtle(ncolor,nthickness,scolor,sthickness):
+    nick = rg.SimpleTurtle()
+    nick.pen = rg.Pen(ncolor,nthickness)
+
+    susan = rg.SimpleTurtle()
+    susan.pen = rg.Pen(scolor,sthickness)
+
 
 
 ###############################################################################
