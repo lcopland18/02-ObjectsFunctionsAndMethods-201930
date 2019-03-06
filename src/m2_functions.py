@@ -24,6 +24,9 @@ two=4
 
 def main():
     print(right_triangle(one,two))
+    #turtle(5,'midnight blue')
+    turtle(10,'red')
+
     """
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
@@ -49,7 +52,7 @@ def right_triangle(side1,side2):
     print(hypotenuse)
 
 ###############################################################################
-# TODO: 4a.  Define a function immediately below this _TODO_.
+# DONE: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
@@ -71,21 +74,29 @@ def right_triangle(side1,side2):
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function at least TWICE (with different values
+# DONE: 4b.  In main, CALL your function at least TWICE (with different values
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
-def turtle(ncolor,nthickness,scolor,sthickness):
+def turtle(nthickness,scolor):
+    window = rg.TurtleWindow()
+
     nick = rg.SimpleTurtle()
-    nick.pen = rg.Pen(ncolor,nthickness)
+    nick.pen = rg.Pen('green',nthickness)
 
     susan = rg.SimpleTurtle()
-    susan.pen = rg.Pen(scolor,sthickness)
+    susan.pen = rg.Pen(scolor,5)
+
+    nick.forward(100)
+    susan.backward(100)
+
+    window.close_on_mouse_click()
+
 
 
 
 ###############################################################################
-# TODO: 5.
+# DONE: 5.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
