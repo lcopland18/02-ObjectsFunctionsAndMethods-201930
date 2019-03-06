@@ -19,8 +19,11 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 
 import rosegraphics as rg
 
+one=3
+two=4
 
 def main():
+    print(right_triangle(one,two))
     """
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
@@ -40,7 +43,10 @@ def main():
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
-
+import math
+def right_triangle(side1,side2):
+    hypotenuse = math.sqrt((side1 ** 2) + (side2 ** 2))
+    return hypotenuse
 
 ###############################################################################
 # TODO: 4a.  Define a function immediately below this _TODO_.
