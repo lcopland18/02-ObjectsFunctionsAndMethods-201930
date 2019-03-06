@@ -213,6 +213,25 @@ def try_methods_and_functions():
     #   function defined above.  If you don't see why, ** ASK FOR HELP. **
     ###########################################################################
 
+    susan = rg.SimpleTurtle()
+    susan.pen = rg.Pen("blue",5)
+    susan.backward(100)
+    susan.speed = 1
+    draw_many_squares(susan,2,100,30)
+
+    susan.speed = 5
+    susan.pen.color = 'red'
+    draw_many_squares(susan,10,50,15)
+
+    susan.speed = 100
+    susan.pen.thickness = 35
+    draw_many_squares(susan,8,300,60)
+
+    susan.pen = rg.Pen("black",3)
+    susan.backward(200)
+    susan.draw_circle(30)
+    susan.draw_square(50)
+
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
