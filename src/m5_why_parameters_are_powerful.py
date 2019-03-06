@@ -21,8 +21,10 @@ def main():
     # comment-out the following two statements and replace them
     # by calls to   better_draw_circles   et al as needed.
     # -------------------------------------------------------------------------
-    draw_circles(rg.Point(100, 50))
-    draw_circles(rg.Point(-200, 0))
+    #draw_circles(rg.Point(100, 50))
+    #draw_circles(rg.Point(-200, 0))
+    better_draw_circles(rg.Point(100,50),5)
+    better_draw_circles(rg.Point(-200,0),20)
 
     window.update()
     window.close_on_mouse_click()
@@ -120,7 +122,7 @@ def draw_circles(point):
 ###############################################################################
 
 
-def better_draw_circles(point):
+def better_draw_circles(point,radius_difference):
     """
     Starts out the same as the   draw_circles   function defined ABOVE.
     You Will make it an IMPROVED, MORE POWERFUL function per the above _TODO_.
@@ -136,11 +138,11 @@ def better_draw_circles(point):
 
         # Go DOWN 15 pixels, ending up pointing east again
         turtle.right(90)
-        turtle.forward(15)
+        turtle.forward(radius_difference)
         turtle.left(90)
 
         turtle.pen_down()
-        turtle.draw_circle(15 * k)  # Radius 15, 30, 45, 60, ...
+        turtle.draw_circle(k * radius_difference)  # Radius 15, 30, 45, 60, ...
 
 
 ###############################################################################
