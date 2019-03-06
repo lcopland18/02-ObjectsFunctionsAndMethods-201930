@@ -23,8 +23,10 @@ def main():
     # -------------------------------------------------------------------------
     #draw_circles(rg.Point(100, 50))
     #draw_circles(rg.Point(-200, 0))
-    better_draw_circles(rg.Point(100,50),5)
-    better_draw_circles(rg.Point(-200,0),20)
+    #better_draw_circles(rg.Point(100,50),5)
+    #better_draw_circles(rg.Point(-200,0),20)
+    even_better_draw_circles(rg.Point(100,50),3,20,'green',1)
+    even_better_draw_circles(rg.Point(-200,0),15,20,'yellow',5)
 
     window.update()
     window.close_on_mouse_click()
@@ -90,7 +92,7 @@ def draw_circles(point):
 
 
 ###############################################################################
-# TODO: 3a.
+# DONE: 3a.
 #   The function
 #       better_draw_circles
 #   defined below this _TODO_ starts out exactly the same as the code for
@@ -113,7 +115,7 @@ def draw_circles(point):
 #   just as in   draw_circles.  But if that parameter is given the value 3,
 #   then the circles should have radii:  3  6  9  12  15  18 ..., respectively.
 #
-# TODO: 3b.
+# DONE: 3b.
 #   In   main  at the place indicated, comment-out the two existing calls
 #   to  draw_circles  and add at least two calls to the improved
 #   better_draw_circles  function, to TEST that your modified code is correct
@@ -176,10 +178,28 @@ def better_draw_circles(point,radius_difference):
 #
 ###############################################################################
 
-def even_better_draw_circles(point):
+def even_better_draw_circles(point, radius_difference,number_circles,circle_color,circle_thickness):
     """ An improved version of draw_circles, per the _TODO_ above. """
     # READ the above _TODO_ and then copy-paste code from better_circles here:
 
+    turtle = rg.SimpleTurtle()
+    turtle.pen.thickness = circle_thickness
+    turtle.pen.color = circle_color
+    turtle.pen_up()
+    turtle.go_to(point)
+    turtle.set_heading(0)  # Point "east" (towards the right)
+
+    for k in range(1, number_circles + 1):  # k becomes 1, 2, 3, ... 10
+
+        turtle.pen_up()
+
+        # Go DOWN 15 pixels, ending up pointing east again
+        turtle.right(90)
+        turtle.forward(radius_difference)
+        turtle.left(90)
+
+        turtle.pen_down()
+        turtle.draw_circle(k * radius_difference)  # Radius 15, 30, 45, 60, ...
 
 ###############################################################################
 # TODO: 5.
