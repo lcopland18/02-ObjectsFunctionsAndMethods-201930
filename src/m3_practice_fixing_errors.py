@@ -47,7 +47,6 @@ def print_math():
     print("The sine of PI is", y)
 
 
-
 def turtle_fun():
     """
     Constructs a TurtleWindow,
